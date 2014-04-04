@@ -13,6 +13,7 @@ projects: [spring-hadoop]
 :yarn_base_appmaster: gs-yarn-testing-appmaster
 :yarn_base_container: gs-yarn-testing-container
 :yarn_base_client: gs-yarn-testing-client
+:yarn_base_dist: gs-yarn-testing-dist
 This guide walks you through to test a simple Spring YARN project.
 
 == What you'll build
@@ -22,12 +23,10 @@ You'll use an existing sample application and create a simple JUnit test to veri
 
 == What you'll need
 
- - About 15 minutes
- - A favorite text editor or IDE
- - {jdk}[JDK 6] or later
- - You can also import the code from this guide as well as view the web page directly into link:/guides/gs/sts[Spring Tool Suite (STS)] and work your way through it from there.
+include::https://raw.github.com/spring-guides/getting-started-macros/master/prereq_editor_jdk_buildtools.adoc[]
+ - Local single-node instance based on Hadoop 2.2.0 or later
 
-NOTE: Testing this sample application you don't need to have an existing or running Hadoop cluster.
+NOTE: Testing this sample application don't need existing or running Hadoop instance.
 
 include::https://raw.github.com/spring-guides/getting-started-macros/master/how_to_complete_this_guide.adoc[]
 
@@ -43,10 +42,10 @@ include::https://raw.github.com/spring-guides/getting-started-macros/master/crea
 [[initial]]
 == Create a JUnit Test Class
 
-`src/test/java/hello/AppTests.java`
+`gs-yarn-testing-dist/src/test/java/hello/AppIT.java`
 [source,java]
 ----
-include::complete/src/test/java/hello/AppTests.java[]
+include::complete/gs-yarn-testing-dist/src/test/java/hello/AppIT.java[]
 ----
 
 Let's go through step by step what's happening in this `JUnit` class. As already mentioned earlier we don't need any existing or running Hadoop instances, instead testing framework from Spring YARN provides an easy way to fire up a mini cluster where your tests can be run in an isolated environment. 
@@ -80,7 +79,7 @@ We use `ContainerLogUtils` to find our container logs files from a minicluster.
 
 [source,text]
 ----
-$ find target/|grep std
+$ find gs-yarn-testing-dist/target/|grep std
 target/yarn--1502101888/yarn--1502101888-logDir-nm-0_0/application_1392395851515_0001/container_1392395851515_0001_01_000002/Container.stdout
 target/yarn--1502101888/yarn--1502101888-logDir-nm-0_0/application_1392395851515_0001/container_1392395851515_0001_01_000002/Container.stderr
 target/yarn--1502101888/yarn--1502101888-logDir-nm-0_0/application_1392395851515_0001/container_1392395851515_0001_01_000001/Appmaster.stdout
@@ -89,7 +88,7 @@ target/yarn--1502101888/yarn--1502101888-logDir-nm-0_0/application_1392395851515
 
 [source,text]
 ----
-$ grep Hello target/yarn--1502101888/yarn--1502101888-logDir-nm-0_0/application_1392395851515_0001/container_1392395851515_0001_01_000002/Container.stdout
+$ grep Hello gs-yarn-testing-dist/target/yarn--1502101888/yarn--1502101888-logDir-nm-0_0/application_1392395851515_0001/container_1392395851515_0001_01_000002/Container.stdout
 [2014-02-14 16:37:54.278] boot - 18453  INFO [main] --- HelloPojo: Hello from HelloPojo
 [2014-02-14 16:37:54.278] boot - 18453  INFO [main] --- HelloPojo: About to list from hdfs root content
 [2014-02-14 16:37:55.157] boot - 18453  INFO [main] --- HelloPojo: FileStatus{path=hdfs://localhost:33626/; isDirectory=true; modification_time=1392395854968; access_time=0; owner=jvalkealahti; group=supergroup; permission=rwxr-xr-x; isSymlink=false}

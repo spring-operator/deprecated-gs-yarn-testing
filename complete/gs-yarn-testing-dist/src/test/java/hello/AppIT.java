@@ -19,7 +19,7 @@ import org.springframework.yarn.test.junit.ApplicationInfo;
 import org.springframework.yarn.test.support.ContainerLogUtils;
 
 @MiniYarnClusterTest
-public class AppTests extends AbstractBootYarnClusterTests {
+public class AppIT extends AbstractBootYarnClusterTests {
 
 	@Test
 	public void testApp() throws Exception {
