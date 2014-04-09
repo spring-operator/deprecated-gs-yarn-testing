@@ -37,7 +37,13 @@ If you're not familiar with gradle, refer to link:/guides/gs/gradle[Building Jav
 
 Focus on this guide is to use `JUnit` to test your sample application. We have already prepared a project for gradle and application files based on sample link:/guides/gs/yarn-basic[YARN Basic Sample]. What is left for you is to create a `JUnit` test class.
 
+include::https://raw.github.com/spring-guides/getting-started-macros/master/build_system_intro.adoc[]
+
+include::https://raw.github.com/spring-guides/getting-started-macros/master/build_system_intro_yarn.adoc[]
+
 include::https://raw.github.com/spring-guides/getting-started-macros/master/create_directory_structure_yarn_test_hello.adoc[]
+
+include::https://raw.github.com/spring-guides/getting-started-macros/master/create_both_builds.adoc[]
 
 [[initial]]
 == Create a JUnit Test Class
@@ -59,6 +65,9 @@ run. In maven build file we use `failsafe` plugin which is meant for
 integration testing and tests handled by it are executed after all
 project artifacts has been build.
 
+ - We used `spring.yarn.client.files` property to override settings
+   defined in `application.yml` file because test is run from
+   `gs-yarn-testing-dist` project.
  - `@MiniYarnClusterTest` is a composed annotation telling Spring to start a Hadoop's mini cluster having components for `HDFS` and `YARN`. Hadoop's configuration from this minicluster is automatically injected into your testing context.
  - `AbstractBootYarnClusterTests` is a class containing a lot of base functionality what you need in your tests.
 

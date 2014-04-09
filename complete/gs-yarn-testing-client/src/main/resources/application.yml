@@ -7,8 +7,8 @@ spring:
         applicationDir: /app/gs-yarn-testing/
         client:
             files:
-              - "file:target/gs-yarn-testing-dist/gs-yarn-testing-container-0.1.0.jar"
-              - "file:target/gs-yarn-testing-dist/gs-yarn-testing-appmaster-0.1.0.jar"
+              - "file:gs-yarn-testing-dist/target/gs-yarn-testing-dist/gs-yarn-testing-container-0.1.0.jar"
+              - "file:gs-yarn-testing-dist/target/gs-yarn-testing-dist/gs-yarn-testing-appmaster-0.1.0.jar"
             launchcontext:
                 archiveFile: gs-yarn-testing-appmaster-0.1.0.jar
         appmaster:
