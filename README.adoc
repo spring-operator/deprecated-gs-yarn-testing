@@ -2,9 +2,9 @@
 tags: [hadoop,yarn,boot]
 projects: [spring-hadoop]
 ---
-:spring_version: 4.0.3.RELEASE
-:spring_boot_version: 1.0.0.RELEASE
-:spring_hadoop_version: 2.0.0.RC2
+:spring_version: 4.0.5.RELEASE
+:spring_boot_version: 1.0.2.RELEASE
+:spring_hadoop_version: 2.0.0.RC4
 :jdk: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 :toc:
 :icons: font
@@ -23,12 +23,12 @@ You'll use an existing sample application and create a simple JUnit test to veri
 
 == What you'll need
 
-include::https://raw.github.com/spring-guides/getting-started-macros/master/prereq_editor_jdk_buildtools.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/prereq_editor_jdk_buildtools.adoc[]
  - Local single-node instance based on Hadoop 2.2.0 or later
 
 NOTE: Testing this sample application don't need existing or running Hadoop instance.
 
-include::https://raw.github.com/spring-guides/getting-started-macros/master/how_to_complete_this_guide.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/how_to_complete_this_guide.adoc[]
 
 If you're not familiar with gradle, refer to link:/guides/gs/gradle[Building Java Projects with Gradle].
 
@@ -37,13 +37,13 @@ If you're not familiar with gradle, refer to link:/guides/gs/gradle[Building Jav
 
 Focus on this guide is to use `JUnit` to test your sample application. We have already prepared a project for gradle and application files based on sample link:/guides/gs/yarn-basic[YARN Basic Sample]. What is left for you is to create a `JUnit` test class.
 
-include::https://raw.github.com/spring-guides/getting-started-macros/master/build_system_intro.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/build_system_intro.adoc[]
 
-include::https://raw.github.com/spring-guides/getting-started-macros/master/build_system_intro_yarn.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/build_system_intro_yarn.adoc[]
 
-include::https://raw.github.com/spring-guides/getting-started-macros/master/create_directory_structure_yarn_test_hello.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/create_directory_structure_yarn_test_hello.adoc[]
 
-include::https://raw.github.com/spring-guides/getting-started-macros/master/create_both_builds.adoc[]
+include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/create_both_builds.adoc[]
 
 [[initial]]
 == Create a JUnit Test Class
