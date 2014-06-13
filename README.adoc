@@ -14,7 +14,7 @@ projects: [spring-hadoop]
 :yarn_base_container: gs-yarn-testing-container
 :yarn_base_client: gs-yarn-testing-client
 :yarn_base_dist: gs-yarn-testing-dist
-This guide walks you through to test a simple Spring YARN project.
+This guide walks you through testing a simple Spring YARN project.
 
 == What you'll build
 
