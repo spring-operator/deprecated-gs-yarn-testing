@@ -21,7 +21,7 @@ subprojects { subproject ->
         maven { url "http://repo.spring.io/libs-release" }
     }
     dependencies {
-        compile("org.springframework.data:spring-yarn-boot:2.2.0.RELEASE")
+        compile("org.springframework.data:spring-yarn-boot:2.4.0.RELEASE")
     }
     task copyJars(type: Copy) {
         from "$buildDir/libs"
@@ -48,7 +48,7 @@ project('gs-yarn-testing-dist') {
         compile project(":gs-yarn-testing-client")
         compile project(":gs-yarn-testing-appmaster")
         compile project(":gs-yarn-testing-container")
-        testCompile("org.springframework.data:spring-yarn-boot-test:2.2.0.RELEASE")
+        testCompile("org.springframework.data:spring-yarn-boot-test:2.4.0.RELEASE")
         testCompile("org.hamcrest:hamcrest-core:1.2.1")
         testCompile("org.hamcrest:hamcrest-library:1.2.1")
     }
