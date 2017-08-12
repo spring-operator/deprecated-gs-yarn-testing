@@ -54,7 +54,7 @@ include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/
 include::complete/gs-yarn-testing-dist/src/test/java/hello/AppIT.java[]
 ----
 
-Let's go through step by step what's happening in this `JUnit` class. As already mentioned earlier we don't need any existing or running Hadoop instances, instead testing framework from Spring YARN provides an easy way to fire up a mini cluster where your tests can be run in an isolated environment. 
+Let's go through step by step what's happening in this `JUnit` class. As already mentioned earlier we don't need any existing or running Hadoop instances, instead testing framework from Spring YARN provides an easy way to fire up a mini cluster where your tests can be run in an isolated environment.
 
 We named a class as `AppIT` which plays nice with both gradle and
 maven when tests are executed during the build. Tests will need a real
@@ -122,5 +122,15 @@ $ grep Hello gs-yarn-testing-dist/target/yarn--1502101888/yarn--1502101888-logDi
 
 Congratulations! You have now created a simple yet effective `JUnit`
 test for building Spring YARN projects.
+
+== See Also
+
+The following guides may also be helpful:
+
+* https://spring.io/guides/gs/yarn-basic/[Simple YARN Application]
+* https://spring.io/guides/gs/maven-yarn/[Building Spring YARN Projects with Maven]
+* https://spring.io/guides/gs/gradle-yarn/[Building Spring YARN Projects with Gradle]
+* https://spring.io/guides/gs/yarn-batch-processing/[Batch YARN Application]
+* https://spring.io/guides/gs/yarn-batch-restart/[Restartable Batch YARN Application]
 
 include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/footer.adoc[]
