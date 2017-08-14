@@ -128,9 +128,10 @@ test for building Spring YARN projects.
 The following guides may also be helpful:
 
 * https://spring.io/guides/gs/yarn-basic/[Simple YARN Application]
-* https://spring.io/guides/gs/maven-yarn/[Building Spring YARN Projects with Maven]
-* https://spring.io/guides/gs/gradle-yarn/[Building Spring YARN Projects with Gradle]
+* https://spring.io/guides/gs/yarn-basic-single/[Simple Single Project YARN Application]
 * https://spring.io/guides/gs/yarn-batch-processing/[Batch YARN Application]
 * https://spring.io/guides/gs/yarn-batch-restart/[Restartable Batch YARN Application]
+* https://spring.io/guides/gs/maven-yarn/[Building Spring YARN Projects with Maven]
+* https://spring.io/guides/gs/gradle-yarn/[Building Spring YARN Projects with Gradle]
 
 include::https://raw.githubusercontent.com/spring-guides/getting-started-macros/master/footer.adoc[]
